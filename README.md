@@ -14,13 +14,13 @@
 
 ### Landing Page
 
-- ![Landing Page GIF 1](./assets/appimg/landingpage.mp4)
-- ![Signup Page GIF 2](./assets/appimg/signinpage.mp4)
+- <img src="./assets/appimg/landingpage.mp4" alt="Landing Page GIF 1" width="300"/>
+- <img src="./assets/appimg/signinpage.mp4" alt="Signup Page GIF 2" width="300"/>
 
 ### Home & Profile Pages
 
-- ![Home Page Screenshot](./assets/appimg/homepage.jpeg)
-- ![Profile Page Screenshot](./assets/appimg/profilepage.jpeg)
+- <img src="./assets/appimg/homepage.jpeg" alt="Home Page Screenshot" width="300"/>
+- <img src="./assets/appimg/profilepage.jpeg" alt="Profile Page Screenshot" width="300"/>
 
 ## 🛠 Technologies Used
 
