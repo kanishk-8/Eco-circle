@@ -33,6 +33,4 @@
 - **Clerk**: User authentication and account management.
 - **react-native-gifted-charts**: For dynamic donut chart visualizations in the budget tracker.
 
-## 🤝 Contribution
 
-Contributions are always welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions can help make Eco-Circle better for everyone!
