@@ -14,13 +14,17 @@
 
 ### Landing Page
 
+<div style="display: flex; gap: 10px;">
 - <img src="./assets/appimg/landingpage.gif" alt="Landing Page GIF 1" width="300"/>
 - <img src="./assets/appimg/signinpage.gif" alt="Signup Page GIF 2" width="300"/>
+</div>
 
 ### Home & Profile Pages
 
+<div style="display: flex; gap: 10px;">
 - <img src="./assets/appimg/homepage.jpeg" alt="Home Page Screenshot" width="300"/>
 - <img src="./assets/appimg/profilepage.jpeg" alt="Profile Page Screenshot" width="300"/>
+</div>
 
 ## 🛠 Technologies Used
 
