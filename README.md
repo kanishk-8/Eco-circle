@@ -1,6 +1,6 @@
-# EcoWellbeing App 🌿
+# Eco-Circle App 🌿
 
-**EcoWellbeing** is a mobile application designed to inspire sustainable living and increase environmental awareness. Built with **React Native**, the app empowers users to track their eco-friendly habits, manage budgets, participate in environmental challenges, and access helpful tips for leading a greener lifestyle.
+**Eco-Circle** is a mobile application designed to inspire sustainable living and increase environmental awareness. Built with **React Native**, the app empowers users to track their eco-friendly habits, manage budgets, participate in environmental challenges, and access helpful tips for leading a greener lifestyle.
 
 ## 🌟 Features
 
@@ -35,4 +35,4 @@
 
 ## 🤝 Contribution
 
-Contributions are always welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions can help make EcoWellbeing better for everyone!
+Contributions are always welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions can help make Eco-Circle better for everyone!
