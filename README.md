@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+# EcoWellbeing App 🌿
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**EcoWellbeing** is a mobile application designed to inspire sustainable living and increase environmental awareness. Built with **React Native**, the app empowers users to track their eco-friendly habits, manage budgets, participate in environmental challenges, and access helpful tips for leading a greener lifestyle.
 
-## Get started
+## 🌟 Features
 
-1. Install dependencies
+- **User Authentication**: Secure sign-in and account management using **Clerk**.
+- **Budget Tracking**: Visualize and track your spending on eco-friendly initiatives through an interactive donut chart.
+- **Eco Challenges**: Join various eco-friendly challenges, monitor your progress, and stay motivated.
+- **Achievements**: Celebrate your sustainable living milestones and accomplishments.
+- **Sustainability Tips**: Learn practical tips for improving your environmental footprint.
 
-   ```bash
-   npm install
-   ```
+## 📱 Screenshots & GIFs
 
-2. Start the app
+### Landing Page
 
-   ```bash
-    npx expo start
-   ```
+- ![Landing Page GIF 1](./assets/appimg/landingpage.mp4)
+- ![Signup Page GIF 2](./assets/appimg/signinpage.mp4)
 
-In the output, you'll find options to open the app in a
+### Home & Profile Pages
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- ![Home Page Screenshot](./assets/appimg/homepage.jpeg)
+- ![Profile Page Screenshot](./assets/appimg/profilepage.jpeg)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠 Technologies Used
 
-## Get a fresh project
+- **React Native: Core framework for building the mobile app.**
+- **Expo**: Simplifies React Native app development and testing.
+- **Clerk**: User authentication and account management.
+- **react-native-gifted-charts**: For dynamic donut chart visualizations in the budget tracker.
 
-When you're ready, run:
+## 🤝 Contribution
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Contributions are always welcome! Feel free to fork this repository, make improvements, and submit pull requests. Your contributions can help make EcoWellbeing better for everyone!

@@ -11,10 +11,10 @@ const BudgetDonutChart = () => {
 
   // Dummy JSON data
   const [budgetData] = useState([
-    { label: "Expense", value: 500, color: "#f54242", text: "500" },
-    { label: "Income", value: 300, color: "#f5a442", text: "300" },
-    { label: "Savings", value: 150, color: "#42aaf5", text: "150" },
-    { label: "Assets", value: 100, color: "#42f554", text: "100" },
+    { label: "Electricity", value: 500, color: "#f54242", text: "500" },
+    { label: "Fuel", value: 300, color: "#f5a442", text: "300" },
+    { label: "Water", value: 150, color: "#42aaf5", text: "150" },
+    { label: "Miscellaneous", value: 100, color: "#42f554", text: "100" },
   ]);
 
   return (

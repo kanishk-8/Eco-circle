@@ -16,10 +16,10 @@ export default function _layout() {
         ),
         tabBarStyle: {
           position: "absolute",
-          backgroundColor: "orange", // Frosted glass effect with transparency
+          backgroundColor: "#4abd3e", // Frosted glass effect with transparency
           borderTopWidth: 0, // Remove border for a cleaner look
           elevation: 0, // Remove shadow on Android
-          bottom: 30,
+          bottom: 20,
           marginHorizontal: (Dimensions.get("window").width * 0.5) / 2,
           padding: 10,
           // paddingHorizontal: 15,
@@ -101,5 +101,48 @@ export default function _layout() {
         }}
       />
     </Tabs>
+
+    // <Tabs
+    //   screenOptions={{
+    //     tabBarBackground: () => (
+    //       <BlurView
+    //         tint="light" // You can try 'dark' for darker designs
+    //         intensity={100} // Increase intensity for stronger blur effect
+    //       />
+    //     ),
+    //     tabBarStyle: {
+    //       backgroundColor: "transparent", // Frosted glass effect with transparency
+    //       borderTopWidth: 0, // Remove border for a cleaner look
+    //       elevation: 0, // Remove shadow on Android
+    //     },
+    //     tabBarActiveTintColor: "lightgreen", // Active icon color
+    //     tabBarInactiveTintColor: "black", // Inactive icon color
+    //   }}
+    // >
+    //   <Tabs.Screen
+    //     name="home"
+    //     options={{
+    //       tabBarIcon: (color) => (
+    //         <MaterialIcons name="home" size={27} color={color} />
+    //       ),
+    //     }}
+    //   />
+    //   <Tabs.Screen
+    //     name="explore"
+    //     options={{
+    //       tabBarIcon: (color) => (
+    //         <MaterialIcons name="explore" size={27} color={color} />
+    //       ),
+    //     }}
+    //   />
+    //   <Tabs.Screen
+    //     name="profile"
+    //     options={{
+    //       tabBarIcon: (color) => (
+    //         <MaterialIcons name="settings" size={27} color={color} />
+    //       ),
+    //     }}
+    //   />
+    // </Tabs>
   );
 }

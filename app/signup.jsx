@@ -18,7 +18,6 @@ export default function SignUpScreen() {
 
   const [emailAddress, setEmailAddress] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [username, setUsername] = React.useState("");
   const [firstName, setFirstName] = React.useState("");
   const [profileImage, setProfileImage] = React.useState(null); // Store the selected image
   const [pendingVerification, setPendingVerification] = React.useState(false);
@@ -51,14 +50,10 @@ export default function SignUpScreen() {
     }
 
     try {
-      // To upload the profile image, you would typically upload it to Firebase or another storage solution
       await signUp.create({
         emailAddress,
         password,
         firstName,
-        username,
-        // In production, you'd store the uploaded image URL here after uploading to a service like Firebase
-        // For now, we'll just skip this part as an example.
       });
 
       await signUp.prepareEmailAddressVerification({ strategy: "email_code" });
@@ -93,6 +88,16 @@ export default function SignUpScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create an Account</Text>
+
+      {/* Display the profile image picker at the top */}
+      <TouchableOpacity style={styles.imagePicker} onPress={pickImage}>
+        {profileImage ? (
+          <Image source={{ uri: profileImage }} style={styles.profileImage} />
+        ) : (
+          <Text style={styles.imagePickerText}>Upload Profile Picture</Text>
+        )}
+      </TouchableOpacity>
+
       {!pendingVerification && (
         <>
           <TextInput
@@ -115,18 +120,6 @@ export default function SignUpScreen() {
             onChangeText={setFirstName}
             style={styles.input}
           />
-          <TextInput
-            value={username}
-            placeholder="Username"
-            onChangeText={setUsername}
-            style={styles.input}
-          />
-          <TouchableOpacity style={styles.imagePicker} onPress={pickImage}>
-            <Text style={styles.imagePickerText}>Upload Profile Picture</Text>
-          </TouchableOpacity>
-          {profileImage && (
-            <Image source={{ uri: profileImage }} style={styles.profileImage} />
-          )}
           <Button title="Sign Up" onPress={onSignUpPress} />
         </>
       )}
@@ -148,42 +141,44 @@ export default function SignUpScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#f2f2f2",
     padding: 20,
     justifyContent: "center",
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
     marginBottom: 20,
     textAlign: "center",
+    color: "#333",
   },
   input: {
     marginVertical: 10,
-    padding: 10,
+    padding: 15,
     height: 50,
     width: "100%",
     borderWidth: 1,
-    borderRadius: 8,
-    borderColor: "#ddd",
+    borderRadius: 10,
+    borderColor: "#ccc",
     backgroundColor: "#fff",
+    fontSize: 16,
   },
   imagePicker: {
     backgroundColor: "#007BFF",
     padding: 10,
-    marginVertical: 10,
-    borderRadius: 8,
+    marginBottom: 20,
+    borderRadius: 10,
     alignItems: "center",
+    justifyContent: "center",
   },
   imagePickerText: {
     color: "#fff",
     fontSize: 16,
   },
   profileImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     marginVertical: 20,
-    alignSelf: "center",
   },
 });
