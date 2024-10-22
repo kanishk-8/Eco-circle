@@ -14,8 +14,8 @@
 
 ### Landing Page
 
-- <img src="./assets/appimg/landingpage.mp4" alt="Landing Page GIF 1" width="300"/>
-- <img src="./assets/appimg/signinpage.mp4" alt="Signup Page GIF 2" width="300"/>
+- <img src="./assets/appimg/landingpage.gif" alt="Landing Page GIF 1" width="300"/>
+- <img src="./assets/appimg/signinpage.gif" alt="Signup Page GIF 2" width="300"/>
 
 ### Home & Profile Pages
 
