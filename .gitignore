@@ -15,4 +15,5 @@ web-build/
 
 
 .env
-# .assets
+android
+# assets
