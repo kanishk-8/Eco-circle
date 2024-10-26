@@ -40,7 +40,7 @@ const Profile = () => {
           headerTitleStyle: {
             color: "#4abd3e",
             fontWeight: "bold",
-            fontSize: 60,
+            fontSize: 50,
           },
           headerStyle: {
             backgroundColor: "white",
@@ -52,7 +52,7 @@ const Profile = () => {
               onPress={onSignOutPress}
               disabled={loading}
             >
-              <Ionicons name="log-out-outline" size={30} color="black" />
+              <Ionicons name="log-out-outline" size={40} color="white" />
             </TouchableOpacity>
           ),
         }}
@@ -65,12 +65,13 @@ const Profile = () => {
               source={{ uri: user?.imageUrl || dummyImage }} // Fallback to dummy image if user image is not available
               style={styles.profileImage}
             />
-            <Text style={styles.name}>
-              {user.firstName} {user.lastName}
-            </Text>
-            <Text style={styles.email}>
-              {user.emailAddresses[0].emailAddress}
-            </Text>
+            <View style={styles.contributionSection}>
+              <Text style={styles.name}>Name: {user.firstName}</Text>
+              <Text style={styles.email}>
+                Email: {user.emailAddresses[0].emailAddress}
+              </Text>
+              <Text style={styles.email}>Member Since: {user.created_at}</Text>
+            </View>
           </View>
 
           {/* Contribution Section */}
@@ -106,11 +107,11 @@ const styles = StyleSheet.create({
     // justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#fff",
   },
   profileSection: {
     alignItems: "center",
-    marginBottom: 30,
+    width: "100%",
   },
   profileImage: {
     width: 200,
@@ -119,9 +120,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   name: {
-    fontSize: 22,
+    fontSize: 30,
     fontWeight: "bold",
-    color: "#333",
+    color: "#4abd3e",
   },
   email: {
     fontSize: 16,
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
   contributionSection: {
     width: "100%",
     padding: 20,
-    backgroundColor: "#fff",
+    backgroundColor: "#f0f0f0",
     borderRadius: 10,
     shadowColor: "#000",
     shadowOpacity: 0.1,
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#2f4f4f",
+    color: "#4abd3e",
   },
   contributionText: {
     fontSize: 16,
@@ -151,7 +152,8 @@ const styles = StyleSheet.create({
     color: "#555",
   },
   signOutButton: {
-    backgroundColor: "#4abd3e", // Change this to match your app's theme
+    // make the background color lighter shade of #4abd3e
+    backgroundColor: "#4abd3e",
     marginHorizontal: 10,
     padding: 10,
     borderRadius: 50,

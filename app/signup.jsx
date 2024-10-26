@@ -7,10 +7,12 @@ import {
   Image,
   Text,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { useSignUp } from "@clerk/clerk-expo";
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function SignUpScreen() {
   const { isLoaded, signUp, setActive } = useSignUp();
@@ -86,17 +88,23 @@ export default function SignUpScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Create an Account</Text>
 
       {/* Display the profile image picker at the top */}
-      <TouchableOpacity style={styles.imagePicker} onPress={pickImage}>
+      <View style={styles.imageContainer}>
         {profileImage ? (
           <Image source={{ uri: profileImage }} style={styles.profileImage} />
         ) : (
-          <Text style={styles.imagePickerText}>Upload Profile Picture</Text>
+          <Image
+            source={require("../assets/images/placeholderimg.png")}
+            style={styles.profileImage}
+          />
         )}
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.imagePicker} onPress={pickImage}>
+          <Ionicons name="camera-outline" size={40} color="white" />
+        </TouchableOpacity>
+      </View>
 
       {!pendingVerification && (
         <>
@@ -120,7 +128,13 @@ export default function SignUpScreen() {
             onChangeText={setFirstName}
             style={styles.input}
           />
-          <Button title="Sign Up" onPress={onSignUpPress} />
+          {/* <Button title="Sign Up" onPress={onSignUpPress} /> */}
+          <TouchableOpacity
+            style={styles.button}
+            onpress={() => onSignUpPress()}
+          >
+            <Text style={styles.buttonText}>Sign Up</Text>
+          </TouchableOpacity>
         </>
       )}
       {pendingVerification && (
@@ -134,51 +148,65 @@ export default function SignUpScreen() {
           <Button title="Verify Email" onPress={onPressVerify} />
         </>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#fff",
     padding: 20,
-    justifyContent: "center",
   },
   title: {
-    fontSize: 28,
+    fontSize: 35,
     fontWeight: "bold",
     marginBottom: 20,
     textAlign: "center",
-    color: "#333",
+    color: "#4abd3e",
   },
   input: {
-    marginVertical: 10,
-    padding: 15,
-    height: 50,
     width: "100%",
-    borderWidth: 1,
+    height: 50,
     borderRadius: 10,
-    borderColor: "#ccc",
-    backgroundColor: "#fff",
+    borderColor: "#ddd",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: 15,
+    backgroundColor: "#f9f9f9",
     fontSize: 16,
+    color: "#333",
   },
   imagePicker: {
-    backgroundColor: "#007BFF",
+    backgroundColor: "#4abd3e",
     padding: 10,
-    marginBottom: 20,
+    borderRadius: 40,
+    alignItems: "center",
+    position: "absolute",
+    bottom: 10,
+    right: "30%",
+    width: 60,
+  },
+  imageContainer: {
+    alignItems: "center",
+  },
+  profileImage: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    marginVertical: 20,
+  },
+  button: {
+    borderColor: "#4abd3e",
+    borderWidth: 1,
+    padding: 10,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
   },
-  imagePickerText: {
-    color: "#fff",
-    fontSize: 16,
-  },
-  profileImage: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    marginVertical: 20,
+  buttonText: {
+    color: "#4abd3e",
+    fontSize: 20,
+    fontWeight: "bold",
   },
 });

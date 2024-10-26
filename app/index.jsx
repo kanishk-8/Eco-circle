@@ -86,6 +86,7 @@ const Index = () => {
     <View style={styles.container}>
       <LottieView
         autoPlay
+        loop={false}
         style={styles.lottieAnimation}
         source={require("../assets/images/plant.json")}
       />

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Eco-circle",
-    "slug": "Eco-circle",
+    "slug": "eco-circle",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kanishk8.ecocircle"
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +33,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b1e2df4d-4276-4414-8647-95cb73245af2"
+      }
+    },
+    "owner": "kanishk8"
   }
 }

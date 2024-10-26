@@ -7,9 +7,9 @@ import {
   SectionList,
 } from "react-native";
 import React from "react";
-import BudgetDonutChart from "../../components/piechart";
 import { Stack } from "expo-router";
 import { ClerkLoaded, useUser } from "@clerk/clerk-expo";
+import ContributionProgress from "../../components/levelindicaor";
 
 // Dummy data
 const sections = [
@@ -65,7 +65,7 @@ const Home = () => {
           headerTitleStyle: {
             color: "#4abd3e",
             fontWeight: "bold",
-            fontSize: 60,
+            fontSize: 50,
           },
           headerStyle: {
             backgroundColor: "white",
@@ -85,6 +85,9 @@ const Home = () => {
         }}
       />
       <SectionList
+        onRefresh={() => {}}
+        refreshing={false}
+        showsVerticalScrollIndicator={false}
         sections={[
           { title: "Budget Overview", data: [{ renderChart: true }] },
           ...sections,
@@ -100,7 +103,11 @@ const Home = () => {
           if (item.renderChart) {
             return (
               <View style={styles.chartContainer}>
-                <BudgetDonutChart />
+                {/* <BudgetDonutChart /> */}
+                <ContributionProgress
+                  contributionPercentage={40}
+                  userLevel={4}
+                />
               </View>
             );
           } else if (section.title === "Challenges") {
@@ -144,6 +151,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     justifyContent: "center",
     alignItems: "center",
+    marginHorizontal: 16,
   },
   sectionTitle: {
     fontSize: 20,

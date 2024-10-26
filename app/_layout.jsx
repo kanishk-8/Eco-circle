@@ -93,17 +93,11 @@ function RootStack() {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" />
       <Stack.Screen
-        name="login"
-        options={{
-          animation: "fade_from_bottom",
-          headerShown: true,
-        }}
-      />
-      <Stack.Screen
         name="signup"
         options={{
           // animation: "fade_from_bottom",
           headerShown: true,
+          headerShadowVisible: false,
         }}
       />
     </Stack>

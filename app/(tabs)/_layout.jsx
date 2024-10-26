@@ -8,6 +8,7 @@ export default function _layout() {
   return (
     <Tabs
       screenOptions={{
+        tabBarHideOnKeyboard: true,
         tabBarBackground: () => (
           <BlurView
             tint="light" // You can try 'dark' for darker designs
@@ -19,7 +20,7 @@ export default function _layout() {
           backgroundColor: "#4abd3e", // Frosted glass effect with transparency
           borderTopWidth: 0, // Remove border for a cleaner look
           elevation: 0, // Remove shadow on Android
-          bottom: 20,
+          bottom: 10,
           marginHorizontal: (Dimensions.get("window").width * 0.5) / 2,
           padding: 10,
           // paddingHorizontal: 15,
@@ -29,7 +30,7 @@ export default function _layout() {
           borderRadius: 40,
           height: Dimensions.get("window").height * 0.08,
         },
-        tabBarActiveTintColor: "black", // Active icon color
+        tabBarActiveTintColor: "#4abd3e", // Active icon color
         tabBarInactiveTintColor: "white", // Inactive icon color
         tabBarShowLabel: false,
       }}
@@ -51,7 +52,7 @@ export default function _layout() {
                 margin: 10,
               }}
             >
-              <MaterialIcons name="currency-rupee" size={24} color={color} />
+              <MaterialIcons name="home" size={24} color={color} />
             </View>
           ),
         }}
@@ -59,7 +60,7 @@ export default function _layout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: "explore",
+          title: "Community",
           tabBarIcon: ({ color, focused }) => (
             <View
               style={{
@@ -95,54 +96,11 @@ export default function _layout() {
                 margin: 10,
               }}
             >
-              <MaterialIcons name="settings" size={24} color={color} />
+              <MaterialIcons name="person" size={24} color={color} />
             </View>
           ),
         }}
       />
     </Tabs>
-
-    // <Tabs
-    //   screenOptions={{
-    //     tabBarBackground: () => (
-    //       <BlurView
-    //         tint="light" // You can try 'dark' for darker designs
-    //         intensity={100} // Increase intensity for stronger blur effect
-    //       />
-    //     ),
-    //     tabBarStyle: {
-    //       backgroundColor: "transparent", // Frosted glass effect with transparency
-    //       borderTopWidth: 0, // Remove border for a cleaner look
-    //       elevation: 0, // Remove shadow on Android
-    //     },
-    //     tabBarActiveTintColor: "lightgreen", // Active icon color
-    //     tabBarInactiveTintColor: "black", // Inactive icon color
-    //   }}
-    // >
-    //   <Tabs.Screen
-    //     name="home"
-    //     options={{
-    //       tabBarIcon: (color) => (
-    //         <MaterialIcons name="home" size={27} color={color} />
-    //       ),
-    //     }}
-    //   />
-    //   <Tabs.Screen
-    //     name="explore"
-    //     options={{
-    //       tabBarIcon: (color) => (
-    //         <MaterialIcons name="explore" size={27} color={color} />
-    //       ),
-    //     }}
-    //   />
-    //   <Tabs.Screen
-    //     name="profile"
-    //     options={{
-    //       tabBarIcon: (color) => (
-    //         <MaterialIcons name="settings" size={27} color={color} />
-    //       ),
-    //     }}
-    //   />
-    // </Tabs>
   );
 }
