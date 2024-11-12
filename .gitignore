@@ -17,3 +17,5 @@ web-build/
 .env
 android
 # assets
+
+eas.json
